@@ -1,19 +1,19 @@
 ## 🧷 Docker 파이프라인
-### 도커 명령어
+#### 도커 명령어
 https://github.com/conf312/concept-description/blob/master/concept/Docker/command.md
 
-## Initialization
-### 네트워크 생성
+## 네트워크 생성
 ```
 docker network create issuemoa
 ```
 
-### MySql 이미지 생성
+## MySQL
+#### MySql 이미지 생성
 ```
 docker pull mysql
 ```
 
-### MySQL 컨테이너 실행
+#### MySQL 컨테이너 실행
 ```
 docker run -d \
   --name mysql \
@@ -23,11 +23,22 @@ docker run -d \
   mysql
 ```
 
-### MongoDB 이미지 생성
+#### MySQL 덤프 생성
+```
+mysqldump -u [계정] -p [데이터베이스명] > [/경로/파일명.sql]
+```
+
+#### MySQL 덤프 복원
+```
+mysql -u [계정] -p [데이터베이스명] < [/경로/파일명.sql]
+```
+
+## MongoDB
+#### MongoDB 이미지 생성
 ```
 docker pull mongo
 ```
-### MongoDB 컨테이너 실행
+#### MongoDB 컨테이너 실행
 ```
 docker run -d \
   --name mongo \
@@ -36,11 +47,12 @@ docker run -d \
   mongo
 ```
 
-### Redis 이미지 생성
+## Redis
+#### Redis 이미지 생성
 ```
 docker pull redis
 ```
-### Redis 컨테이너 실행
+#### Redis 컨테이너 실행
 ```
 docker run -d \
   --name redis \
@@ -48,12 +60,19 @@ docker run -d \
   redis
 ```
 
-### Docker hub 에서 jenkins 도커 이미지 가져오기
+## Jenkins
+#### Jenkins 이미지 생성
 ```
 docker pull gpfm312/jenkins-jdk17
 ```
 
-### 컨테이너 실행
+#### Jenkins 컨테이너 실행
 ```
-docker run --name jenkins -p 9090:8080 -p 50000:50000 -d -v /var/run/docker.sock:/var/run/docker.sock -v /var/jenkins_home:/var/jenkins_home -u root jenkins/jdk17
+docker run -d \
+--name jenkins \
+-p 9090:8080 -p 50000:50000 \
+-v /var/run/docker.sock:/var/run/docker.sock \
+-v /var/jenkins_home:/var/jenkins_home \
+-u root \
+jenkins/jdk17
 ```
