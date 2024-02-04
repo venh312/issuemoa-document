@@ -70,9 +70,35 @@ docker pull gpfm312/jenkins-jdk17
 ```
 docker run -d \
 --name jenkins \
--p 9090:8080 -p 50000:50000 \
+-p 9090:8080 \
 -v /var/run/docker.sock:/var/run/docker.sock \
 -v /var/jenkins_home:/var/jenkins_home \
 -u root \
 jenkins/jdk17
+```
+
+## 🌈 Prometheus
+#### Prometheus 이미지 생성
+```
+docker pull prom/prometheus
+```
+
+### Prometheus 컨테이너 실행
+```
+docker run -d \
+--name prometheus \
+-p 9091:9090 \
+-v /home/venh/prometheus.yml:/etc/prometheus/prometheus.yml \
+prom/prometheus
+```
+
+## 🌈 Grafana
+#### Grafana 이미지 생성
+```
+docker pull grafana/grafana
+```
+
+### Grafana 컨테이너 실행
+```
+docker run -d --name grafana -p 3000:3000 grafana/grafana
 ```
