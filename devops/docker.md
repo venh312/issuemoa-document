@@ -83,7 +83,9 @@ jenkins/jdk17
 docker pull prom/prometheus
 ```
 
-### Prometheus 컨테이너 실행
+#### Prometheus 컨테이너 실행
+-v: prometheus.yml 파일을 볼륨 마운트 경로에 위치 시켜야한다.    
+-p: 기본 포트는 9090이지만, Jenkins가 9090으로 사용하고 있어서 9091로 변경한다.
 ```
 docker run -d \
 --name prometheus \
@@ -98,7 +100,7 @@ prom/prometheus
 docker pull grafana/grafana
 ```
 
-### Grafana 컨테이너 실행
+#### Grafana 컨테이너 실행
 ```
 docker run -d --name grafana -p 3000:3000 grafana/grafana
 ```
