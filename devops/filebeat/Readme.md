@@ -1,13 +1,28 @@
 ## filebeat 
 Filebeat는 Elastic Stack의 일부로, 로그 파일과 데이터를 수집하여 전송하는 경량 데이터 수집기입니다. 주로 로그 파일, 이벤트 로그 및 서버 및 애플리케이션에서 생성되는 다양한 형식의 데이터를 실시간으로 수집하여 Elastic Stack으로 전송합니다. 이러한 데이터는 Elasticsearch, Logstash 또는 Kibana와 같은 Elastic Stack의 다른 구성 요소에서 검색, 분석 및 시각화할 수 있습니다.
 
-### filebeat install
+### install
 ```
-sudo apt install apt-transport-https
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
-sudo sh -c 'echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" > /etc/apt/sources.list.d/logstash-7.x.list'
-sudo apt update
-sudo apt install logstash
+sudo sh -c 'echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" > /etc/apt/sources.list.d/elastic-7.x.list'
+sudo apt-get update
+sudo apt-get install filebeat
+```
+
+### service register & start
+```
+sudo systemctl enable filebeat
+sudo systemctl start filebeat
+```
+
+### status
+```
+sudo systemctl status filebeat
+```
+
+### send check
+```
+sudo journalctl -u filebeat
 ```
 
 ### filebeat.yml - input 
