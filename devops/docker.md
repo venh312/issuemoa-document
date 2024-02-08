@@ -74,6 +74,7 @@ docker run -d \
 -v /var/run/docker.sock:/var/run/docker.sock \
 -v /var/jenkins_home:/var/jenkins_home \
 -u root \
+-e TZ=Asia/Seoul \
 jenkins/jdk17
 ```
 
