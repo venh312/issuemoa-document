@@ -7,6 +7,16 @@ sudo apt update
 sudo apt install kibana
 ```
 
+### kibana.yml 설정
+```
+vi /etc/kibana/kibana.yml
+```
+```
+server.host: "0.0.0.0"
+```
+외부에서 접근할 수 있도록 server.host를 0.0.0.0 으로 변경합니다.
+
+
 ### 기본 설정
 - [Kibana IP]:5601 로 접속 후 왼쪽 메뉴의 Discover를 선택합니다.
 - logstash → logstash.conf 파일에 output 설정을 보면 `index => index => "logstash-%{+YYYY.MM.dd}"` 로 설정 되어 있습니다.
