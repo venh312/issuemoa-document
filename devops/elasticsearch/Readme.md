@@ -56,6 +56,11 @@ curl localhost:9200
 ### elasticsearch.yml 경로
 ```
 cd /etc/elasticsearch
+
+vi /etc/elasticsearch/elasticsearch.yml
+# 주석해제
+network.host : 0.0.0.0 (모든 접근을 허용)
+http.port: 9200 (elasticsearch 기본 포트 9200)
 ```
 
 ### elasticsearch.log 경로
@@ -63,7 +68,7 @@ cd /etc/elasticsearch
 cd /var/log/elasticsearch
 ```
 
-### 설치 후 9200 포트로 접근이 안 될 경우 로그 확인
+### 설치 후 9200 포트로 접근이 안 될 경우
 `Received plaintext http traffic on an https channel, closing connection` 기본 SSL 적용으로 되어 있기 때문에 http 접근 시 아래 옵션을 `false`로 변경 후 재시작한다.
 ```
 xpack.security.enabled: false
