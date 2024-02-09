@@ -1,4 +1,8 @@
-## Elasticsearch Install
+## Elasticsearch
+- Elasticsearch는 Apache Lucene에 구축되어 배포된 검색 및 분석 엔진입니다. 
+- Elasticsearch를 통해 루씬 라이브러리를 단독으로 사용할 수 있게 되었으며, 대용량 데이터를 신속하게, 거의 실시간( NRT, Near Real Time )으로 저장, 검색, 분석할 수 있습니다.
+
+### Elasticsearch Install
 https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html
 
 ### Import the Elasticsearch PGP Key
