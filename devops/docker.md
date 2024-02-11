@@ -44,6 +44,7 @@ docker run -d \
   --name mongo \
   -p 27017:27017 \
   -v /data/db:/data/db \
+  -v /home/venh/mongo:/etc/mongod.conf.orig \
   mongo
 ```
 
