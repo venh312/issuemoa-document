@@ -15,3 +15,15 @@ services:
       KAFKA_CREATE_TOPICS: "issuemoa-topic:1:1"
       KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+
+  kafka-ui:
+      image: provectuslabs/kafka-ui:latest
+      container_name: kafka-ui
+      depends_on:
+        - kafka
+      ports:
+        - 8080:8080
+      environment:
+        - DYNAMIC_CONFIG_ENABLED=true
+        - KAFKA_CLUSTERS_0_NAME=peters_kafka
+        - KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=kafka:9092
