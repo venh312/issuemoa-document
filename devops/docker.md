@@ -44,8 +44,21 @@ docker run -d \
   --name mongo \
   -p 27017:27017 \
   -v /data/db:/data/db \
-  mongo \
-  --auth
+  mongo
+```
+사용자 계정 추가 후 컨테이너 실행 시 `--auth` 옵션 추가 (사용자 접근 권한 추가)
+
+#### switched to db admin
+```
+use admin
+```
+#### create user
+```
+db.createUser({user: "root", pwd: "root", roles:["root"]})
+```
+#### connect root
+```
+mongo -u root -p root
 ```
 
 ## 🌈 Redis
