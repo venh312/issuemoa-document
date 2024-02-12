@@ -8,7 +8,7 @@
 
 ## docker-compose 실행
 ```
-docker-compose -f issuemoa-kafka-docker-compose.yml up -d
+docker-compose -f kafka-compose.yml up -d
 ```
 - -f: 명시적으로 파일을 지정(default: docker-compose.yml)
 - -d: 백그라운드 모드로 실행
