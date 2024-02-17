@@ -48,6 +48,7 @@ docker run -d \
 ```
 사용자 계정 추가 후 컨테이너 실행 시 `--auth` 옵션 추가 (사용자 접근 권한 추가)
 
+### 사용자 계정 생성
 #### switched to db admin
 ```
 use admin
@@ -71,8 +72,10 @@ docker pull redis
 docker run -d \
   --name redis \
   -p 6379:6379 \
-  redis
+  redis \
+  --requirepass "pass"
 ```
+--requirepass: 접속 비밀번호 설정
 
 ## 🌈 Jenkins
 #### Jenkins 이미지 생성
