@@ -46,7 +46,7 @@ output {
 ```
 beat로 부터 데이터를 `input` 받아 가공(filter) 후 `elasticsearch` 로 `ouput` 합니다.
 
-크게는 input / filter / output 구조로 이어지는데 `fileter` 부분 설정을 생략하였습니다.
+크게는 input / filter / output 구조로 이어지는데 `filter` 부분 설정을 생략하였습니다.
 
 ### Reference
 - https://www.elastic.co/kr/blog/a-practical-introduction-to-logstash
