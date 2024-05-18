@@ -19,4 +19,5 @@
 ### 로깅
 <img src="https://img.shields.io/badge/Elasticsearch-005571?style=flat-square&logo=elasticsearch&logoColor=white"> <img src="https://img.shields.io/badge/Logstash-005571?style=flat-square&logo=logstash&logoColor=white"> <img src="https://img.shields.io/badge/Kibana-005571?style=flat-square&logo=kibana&logoColor=white">
 
-### 구성도
+### 구성
+![issuemoa-infra](https://github.com/venh312/issuemoa-document/assets/13326651/34c9ee39-d89b-42ee-9a88-9dbce9b3babe)
