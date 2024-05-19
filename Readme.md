@@ -2,10 +2,10 @@
 <img src="https://img.shields.io/badge/Ubuntu Server 22.04 LTS-E95420?style=flat-square&logo=Ubuntu&logoColor=white">
 
 ### 언어
-<img src="https://img.shields.io/badge/JAVA 17-2F2625?style=flat-square&logo=coffeescript&logoColor=white"> 
+<img src="https://img.shields.io/badge/Typescript-3178C6?style=flat-square&logo=typescript&logoColor=white"> <img src="https://img.shields.io/badge/JAVA 17-2F2625?style=flat-square&logo=coffeescript&logoColor=white"> 
 
 ### 프레임워크 & 라이브러리
-<img src="https://img.shields.io/badge/Spring Boot-6DB33F?style=flat-square&logo=SpringBoot&logoColor=white"> <img src="https://img.shields.io/badge/Spring Batch-6DB33F?style=flat-square&logo=Spring&logoColor=white"> <img src="https://img.shields.io/badge/Spring Docs & Swagger-85EA2D?style=flat-square&logo=swagger&logoColor=black">
+<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=white"> <img src="https://img.shields.io/badge/Spring Boot-6DB33F?style=flat-square&logo=SpringBoot&logoColor=white"> <img src="https://img.shields.io/badge/Spring Batch-6DB33F?style=flat-square&logo=Spring&logoColor=white"> <img src="https://img.shields.io/badge/Spring Docs & Swagger-85EA2D?style=flat-square&logo=swagger&logoColor=black">
 
 ### ORM
 <img src="https://img.shields.io/badge/Spring Data JPA & Querydsl-6DB33F?style=flat-square&logo=spring&logoColor=white"> 
