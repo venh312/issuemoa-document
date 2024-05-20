@@ -7,6 +7,7 @@ sudo service nginx status
 ```
 
 ### /etc/nginx/sites-available/default
+```
 server {
   # 개인 인터넷은 80 포트가 막혀 있으므로 8081로 테스트
   listen 8081;
@@ -30,3 +31,4 @@ server {
     proxy_pass http://localhost:8000; # SCG로 리다이렉트
   }
 }
+```
