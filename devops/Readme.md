@@ -43,6 +43,7 @@ docker pull mongo
 docker run -d \
   --name mongo \
   -p 27017:27017 \
+  -e TZ=Asia/Seoul \
   -v /data/db:/data/db \
   mongo
 ```
