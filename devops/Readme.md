@@ -45,6 +45,8 @@ docker run -d \
   -p 27017:27017 \
   -e TZ=Asia/Seoul \
   -v /data/db:/data/db \
+  -e MONGO_INITDB_ROOT_USERNAME=admin \
+  -e MONGO_INITDB_ROOT_PASSWORD=pwd \
   mongo
 ```
 사용자 계정 추가 후 컨테이너 실행 시 `--auth` 옵션 추가 (사용자 접근 권한 추가)
